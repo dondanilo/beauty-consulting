@@ -107,6 +107,107 @@ h1, h2, h3 {
 }
 
 /* ==========================================
+   3D FLOATING DECORATIONS — CSS SHAPES
+   ========================================== */
+
+/* Generic float keyframes */
+@keyframes float-diamond {
+    0%   { transform: translateY(0px)   rotate(45deg) scale(1); }
+    100% { transform: translateY(-30px) rotate(54deg) scale(1.06); }
+}
+@keyframes float-diamond-r {
+    0%   { transform: translateY(-14px) rotate(45deg); }
+    100% { transform: translateY(14px)  rotate(38deg); }
+}
+@keyframes float-circle {
+    0%   { transform: translateY(0px)   scale(1); }
+    100% { transform: translateY(-22px) scale(1.08); }
+}
+@keyframes float-line {
+    0%   { transform: translateY(0px) rotate(0deg)   scaleX(1); }
+    100% { transform: translateY(-18px) rotate(6deg) scaleX(1.12); }
+}
+@keyframes float-tri {
+    0%   { transform: translateY(0px)   rotate(0deg); }
+    100% { transform: translateY(-26px) rotate(12deg); }
+}
+
+/* Shared shape base */
+.hero::after,
+.pain::before, .pain::after,
+.results::after,
+.scarcity::before, .scarcity::after,
+.final-cta::before, .final-cta::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    border: 1px solid rgba(201, 168, 76, 0.11);
+}
+
+/* ─── Hero top-right diamond ─── */
+.hero::after {
+    width: 110px; height: 110px;
+    top: 12%; right: 8%;
+    animation: float-diamond 10s ease-in-out infinite alternate;
+    border-color: rgba(201, 168, 76, 0.08);
+}
+
+/* ─── Pain section ─── */
+.pain { position: relative; overflow: hidden; }
+.pain::before {
+    width: 80px; height: 80px;
+    top: 8%; right: 4%;
+    animation: float-diamond 9s ease-in-out 1s infinite alternate;
+}
+.pain::after {
+    width: 40px; height: 40px;
+    bottom: 12%; left: 7%;
+    border-radius: 50%;
+    border-color: rgba(201, 168, 76, 0.09);
+    animation: float-circle 11s ease-in-out infinite alternate;
+}
+
+/* ─── Results section ─── */
+.results { position: relative; overflow: hidden; }
+.results::after {
+    width: 66px; height: 66px;
+    top: -33px; right: 12%;
+    animation: float-diamond-r 8s ease-in-out infinite alternate;
+    border-color: rgba(201, 168, 76, 0.07);
+}
+
+/* ─── Scarcity section ─── */
+.scarcity { position: relative; overflow: hidden; }
+.scarcity::before {
+    width: 54px; height: 54px;
+    top: 18%; left: 5%;
+    animation: float-diamond 8s ease-in-out 2s infinite alternate;
+}
+.scarcity::after {
+    width: 30px; height: 1px;
+    bottom: 22%; right: 6%;
+    border: none;
+    border-top: 1px solid rgba(201, 168, 76, 0.14);
+    animation: float-line 7s ease-in-out infinite alternate;
+}
+
+/* ─── Final CTA section ─── */
+.final-cta { position: relative; overflow: hidden; }
+.final-cta::before {
+    width: 100px; height: 100px;
+    top: 10%; right: 5%;
+    animation: float-diamond 12s ease-in-out 0.5s infinite alternate;
+    border-color: rgba(201, 168, 76, 0.07);
+}
+.final-cta::after {
+    width: 48px; height: 48px;
+    bottom: 15%; left: 6%;
+    border-radius: 50%;
+    border-color: rgba(201, 168, 76, 0.08);
+    animation: float-circle 9s ease-in-out 1.5s infinite alternate;
+}
+
+/* ==========================================
    HERO
    ========================================== */
 .hero {
@@ -117,6 +218,22 @@ h1, h2, h3 {
     padding: 120px 0 100px;
     position: relative;
     border-bottom: 1px solid var(--gold-border);
+    overflow: hidden;
+}
+
+#hero-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-content,
+.hero-logo {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-logo {
