@@ -9,15 +9,15 @@
 }
 
 :root {
-    --gold: #C9A84C;
-    --gold-light: #E2C97A;
-    --gold-dim: rgba(201, 168, 76, 0.1);
-    --gold-border: rgba(201, 168, 76, 0.22);
-    --bg: #0D0D0D;
-    --bg-2: #111111;
-    --bg-3: #161616;
-    --text: #F2F2F2;
-    --text-dim: #888;
+    --gold: #E8A87A;
+    --gold-light: #F0BC95;
+    --gold-dim: rgba(232, 168, 122, 0.1);
+    --gold-border: rgba(232, 168, 122, 0.2);
+    --bg: #162E28;
+    --bg-2: #122620;
+    --bg-3: #1A3530;
+    --text: #EDE8DE;
+    --text-dim: #7FA096;
     --radius: 3px;
 }
 
@@ -89,7 +89,7 @@ h1, h2, h3 {
 }
 .btn-primary {
     background: var(--gold);
-    color: #0D0D0D;
+    color: #122620;
 }
 .btn-primary:hover {
     background: var(--gold-light);
@@ -141,7 +141,7 @@ h1, h2, h3 {
     content: '';
     position: absolute;
     pointer-events: none;
-    border: 1px solid rgba(201, 168, 76, 0.11);
+    border: 1px solid rgba(232, 168, 122, 0.11);
 }
 
 /* ─── Hero top-right diamond ─── */
@@ -149,7 +149,7 @@ h1, h2, h3 {
     width: 110px; height: 110px;
     top: 12%; right: 8%;
     animation: float-diamond 10s ease-in-out infinite alternate;
-    border-color: rgba(201, 168, 76, 0.08);
+    border-color: rgba(232, 168, 122, 0.08);
 }
 
 /* ─── Pain section ─── */
@@ -163,7 +163,7 @@ h1, h2, h3 {
     width: 40px; height: 40px;
     bottom: 12%; left: 7%;
     border-radius: 50%;
-    border-color: rgba(201, 168, 76, 0.09);
+    border-color: rgba(232, 168, 122, 0.09);
     animation: float-circle 11s ease-in-out infinite alternate;
 }
 
@@ -173,7 +173,7 @@ h1, h2, h3 {
     width: 66px; height: 66px;
     top: -33px; right: 12%;
     animation: float-diamond-r 8s ease-in-out infinite alternate;
-    border-color: rgba(201, 168, 76, 0.07);
+    border-color: rgba(232, 168, 122, 0.07);
 }
 
 /* ─── Scarcity section ─── */
@@ -187,7 +187,7 @@ h1, h2, h3 {
     width: 30px; height: 1px;
     bottom: 22%; right: 6%;
     border: none;
-    border-top: 1px solid rgba(201, 168, 76, 0.14);
+    border-top: 1px solid rgba(232, 168, 122, 0.14);
     animation: float-line 7s ease-in-out infinite alternate;
 }
 
@@ -197,13 +197,13 @@ h1, h2, h3 {
     width: 100px; height: 100px;
     top: 10%; right: 5%;
     animation: float-diamond 12s ease-in-out 0.5s infinite alternate;
-    border-color: rgba(201, 168, 76, 0.07);
+    border-color: rgba(232, 168, 122, 0.07);
 }
 .final-cta::after {
     width: 48px; height: 48px;
     bottom: 15%; left: 6%;
     border-radius: 50%;
-    border-color: rgba(201, 168, 76, 0.08);
+    border-color: rgba(232, 168, 122, 0.08);
     animation: float-circle 9s ease-in-out 1.5s infinite alternate;
 }
 
@@ -420,7 +420,7 @@ h1, h2, h3 {
     padding: 44px 36px;
     transition: background 0.3s ease;
 }
-.result-card:hover { background: #1c1c1c; }
+.result-card:hover { background: #1E3D36; }
 
 .result-num {
     font-family: 'Cormorant Garamond', serif;
@@ -457,18 +457,18 @@ h1, h2, h3 {
     position: relative;
     transition: border-color 0.3s ease;
 }
-.format-card:hover { border-color: rgba(201, 168, 76, 0.6); }
+.format-card:hover { border-color: rgba(232, 168, 122, 0.6); }
 
 .format-card-featured {
     border-color: var(--gold);
-    background: rgba(201, 168, 76, 0.04);
+    background: rgba(232, 168, 122, 0.04);
 }
 
 .format-badge {
     position: absolute;
     top: -1px; right: 28px;
     background: var(--gold);
-    color: #0D0D0D;
+    color: #122620;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.12em;
@@ -544,17 +544,17 @@ h1, h2, h3 {
     position: relative;
     transition: border-color 0.3s ease;
 }
-.package-card:hover { border-color: rgba(201, 168, 76, 0.5); }
+.package-card:hover { border-color: rgba(232, 168, 122, 0.5); }
 
 .package-featured {
     border-color: var(--gold);
-    background: #0f0e07;
+    background: #112822;
 }
 
 .package-tag {
     display: inline-block;
     background: var(--gold);
-    color: #0D0D0D;
+    color: #122620;
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.14em;
@@ -650,7 +650,7 @@ h1, h2, h3 {
     align-items: flex-start;
     transition: background 0.3s ease;
 }
-.why-item:hover { background: #111111; }
+.why-item:hover { background: #1A3530; }
 
 .why-icon {
     color: var(--gold);
