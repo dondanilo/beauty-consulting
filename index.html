@@ -364,7 +364,7 @@
                 this.x   = random ? Math.random() * canvas.width  : (Math.random() < 0.5 ? -80 : canvas.width + 80);
                 this.y   = random ? Math.random() * canvas.height : Math.random() * canvas.height;
                 this.z   = Math.random() * 700;
-                this.sz  = Math.random() * 48 + 8;
+                this.sz  = Math.random() * 180 + 40;
                 this.rot = Math.random() * Math.PI * 2;
                 this.rotSpd = (Math.random() - 0.5) * 0.009;
                 this.dx  = (Math.random() - 0.5) * 0.28;
@@ -394,7 +394,7 @@
                 ctx.save();
                 ctx.translate(px, py);
                 ctx.rotate(this.rot);
-                ctx.globalAlpha = Math.min(this.alpha * sc * 2.0, 0.26);
+                ctx.globalAlpha = Math.min(this.alpha * sc * 2.2, 0.32);
                 ctx.strokeStyle = GOLD;
                 ctx.lineWidth   = Math.max(0.4, 0.9 * sc);
                 ctx.beginPath();
