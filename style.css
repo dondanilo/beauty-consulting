@@ -724,25 +724,14 @@ h1, h2, h3 {
     flex-shrink: 0;
 }
 
-.about-photo-placeholder {
+.about-photo {
     width: 100%;
     aspect-ratio: 3/4;
-    background: linear-gradient(145deg, #1F4238 0%, #162E28 60%, rgba(232,168,122,0.08) 100%);
+    object-fit: cover;
+    object-position: center top;
+    display: block;
     border: 1px solid var(--gold-border);
-    position: relative;
-}
-.about-photo-placeholder::after {
-    content: 'Фото';
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-dim);
+    filter: grayscale(15%) contrast(1.04);
 }
 
 .about-label {
