@@ -13,9 +13,9 @@
     --gold-light: #F0BC95;
     --gold-dim: rgba(232, 168, 122, 0.1);
     --gold-border: rgba(232, 168, 122, 0.2);
-    --bg: #162E28;
-    --bg-2: #122620;
-    --bg-3: #1A3530;
+    --bg: rgba(22, 46, 40, 0.87);
+    --bg-2: rgba(18, 38, 32, 0.87);
+    --bg-3: rgba(26, 53, 48, 0.87);
     --text: #EDE8DE;
     --text-dim: #7FA096;
     --radius: 3px;
@@ -24,12 +24,17 @@
 html { scroll-behavior: smooth; }
 
 body {
-    background: var(--bg);
+    background: #0F2219;
     color: var(--text);
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+}
+
+section, footer {
+    position: relative;
+    z-index: 1;
 }
 
 .container {
@@ -221,11 +226,11 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
-#hero-canvas {
-    position: absolute;
+#bg-canvas {
+    position: fixed;
     inset: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
     z-index: 0;
 }
@@ -586,7 +591,7 @@ h1, h2, h3 {
 
 .package-featured {
     border-color: var(--gold);
-    background: #112822;
+    background: rgba(17, 40, 34, 0.9);
 }
 
 .package-tag {
