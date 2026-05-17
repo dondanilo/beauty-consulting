@@ -713,28 +713,6 @@ h1, h2, h3 {
     overflow: hidden;
 }
 
-.about-inner {
-    display: flex;
-    gap: 80px;
-    align-items: center;
-}
-
-.about-photo-wrap {
-    flex: 0 0 360px;
-    width: 360px;
-    overflow: hidden;
-}
-
-.about-photo {
-    width: 360px;
-    height: 480px;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-    border: 1px solid var(--gold-border);
-    filter: grayscale(15%) contrast(1.04);
-}
-
 .about-label {
     font-family: 'Inter', sans-serif;
     font-size: 11px;
@@ -742,47 +720,133 @@ h1, h2, h3 {
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--gold);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
-.about-name {
+/* ── Intro ── */
+.about-intro {
+    max-width: 780px;
+    margin-bottom: 64px;
+}
+.about-lead {
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 6vw, 80px);
-    font-weight: 600;
-    line-height: 0.95;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 500;
+    line-height: 1.35;
     color: var(--text);
-    margin-bottom: 12px;
+    margin-bottom: 20px;
 }
-
-.about-role {
-    font-size: 15px;
-    color: var(--text-dim);
-    margin-bottom: 28px;
-}
-
-.about-bio {
+.about-sub {
     font-size: 16px;
+    color: var(--text-dim);
+    line-height: 1.75;
+}
+
+/* ── Stat ── */
+.about-stat {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 48px;
+    border: 1px solid var(--gold-border);
+    background: var(--gold-dim);
+    margin-bottom: 80px;
+}
+.about-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 96px;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    flex-shrink: 0;
+}
+.about-stat-text {
+    font-size: 16px;
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 580px;
+}
+
+/* ── Team cards ── */
+.about-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.expert-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--gold-border);
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+.expert-card:hover { border-color: var(--gold); }
+
+.expert-photo-wrap {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+.expert-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    filter: grayscale(12%) contrast(1.04);
+    transition: transform 0.5s ease;
+}
+.expert-card:hover .expert-photo { transform: scale(1.03); }
+
+.expert-info {
+    padding: 32px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.expert-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text);
+}
+.expert-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+}
+.expert-bio {
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height: 1.7;
+    margin-top: 6px;
+}
+
+/* ── Approach ── */
+.about-approach {
+    border-left: 2px solid var(--gold);
+    padding: 28px 36px;
+    background: var(--gold-dim);
+    max-width: 780px;
+}
+.about-approach-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+}
+.about-approach p {
+    font-size: 17px;
     line-height: 1.75;
     color: var(--text);
-    max-width: 500px;
-    margin-bottom: 36px;
-    border-left: 2px solid var(--gold-border);
-    padding-left: 24px;
-}
-
-.about-markets {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-.about-markets span {
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    color: var(--text-dim);
-    padding: 8px 16px;
-    border: 1px solid var(--gold-border);
 }
 
 /* ==========================================
@@ -971,8 +1035,9 @@ h1, h2, h3 {
 @media (max-width: 960px) {
     .results-grid { grid-template-columns: repeat(2, 1fr); }
     .packages-grid { grid-template-columns: 1fr; max-width: 520px; }
-    .about-inner { grid-template-columns: 1fr; gap: 48px; }
-    .about-photo-placeholder { aspect-ratio: 4/3; max-width: 400px; }
+    .about-team { grid-template-columns: 1fr; max-width: 480px; }
+    .about-stat { flex-direction: column; gap: 16px; text-align: center; padding: 32px 28px; }
+    .about-stat-num { font-size: 72px; }
 }
 
 @media (max-width: 720px) {
