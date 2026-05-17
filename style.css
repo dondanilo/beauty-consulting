@@ -564,6 +564,125 @@ h1, h2, h3 {
 }
 
 /* ==========================================
+   PAYMENT
+   ========================================== */
+.payment {
+    padding: 100px 0;
+    background: var(--bg-2);
+}
+
+.payment-sub {
+    font-size: 16px;
+    color: var(--text-dim);
+    margin-top: -32px;
+    margin-bottom: 52px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 640px;
+}
+
+.qr-card {
+    border: 1px solid var(--gold-border);
+    background: var(--bg-3);
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
+}
+.qr-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-4px);
+}
+
+.qr-img-wrap {
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.qr-img {
+    width: 100%;
+    max-width: 220px;
+    display: block;
+}
+
+.qr-info {
+    padding: 18px 20px;
+    border-top: 1px solid var(--gold-border);
+}
+.qr-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+.qr-hint {
+    font-size: 11px;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+}
+
+/* QR Modal */
+.qr-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 22, 18, 0.92);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    backdrop-filter: blur(6px);
+}
+.qr-modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.qr-modal-inner {
+    background: #fff;
+    padding: 32px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+.qr-modal-inner img {
+    width: 100%;
+    display: block;
+}
+.qr-modal-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #111;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.qr-modal-close {
+    position: absolute;
+    top: 12px; right: 12px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #555;
+    line-height: 1;
+    padding: 4px 8px;
+    transition: color 0.2s;
+}
+.qr-modal-close:hover { color: #000; }
+
+/* ==========================================
    PACKAGES
    ========================================== */
 .packages {
